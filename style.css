@@ -1,0 +1,203 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #b3e5fc, #e1bee7);
+    margin: 0;
+    padding: 0;
+}
+
+/* Üst başlık */
+header {
+    background-color: #0288d1;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Ana içerik */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px; /* kenarlardan biraz daha içerik gelsin */
+}
+
+/* Profil kartı */
+.profile {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 1200px; /* genişlik artırıldı */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #0288d1;
+}
+
+/* Hakkında bölümü */
+.about {
+    background-color: white;
+    border-left: 6px solid #0288d1;
+    border-radius: 10px;
+    padding: 20px 25px;
+    width: 100%;
+    max-width: 1200px; /* genişlik artırıldı */
+    line-height: 1.7;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    margin-bottom: 25px;
+}
+
+/* Video bölümü */
+.video-section {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px; /* genişlik artırıldı */
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    margin-bottom: 25px;
+}
+
+.video-section video {
+    width: 90%; /* ekranı daha fazla kaplasın */
+    max-width: 1000px;
+    border-radius: 10px;
+}
+
+/* Galeri bölümü */
+.gallery {
+    background-color: #fff3e0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 1300px; /* en geniş alan burası */
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    margin-bottom: 25px;
+}
+
+.gallery h2 {
+    color: #ef6c00;
+    margin-bottom: 10px;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.gallery-images img {
+    width: 320px; /* görselleri büyüttük */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #ef6c00;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+/* Gezilecek Yerler Bölümü Güncelleme */
+.places {
+    background-color: #e8f5e9;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1300px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    margin-bottom: 25px;
+}
+
+.places h2 {
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.place-item {
+    background: white;
+    padding: 15px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.place-item h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #2e7d32;
+}
+
+.place-item p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.place-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}
+
+/* İletişim */
+.contact {
+    background-color: #ede7f6;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+}
+
+.contact a {
+    color: #6a1b9a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Alt bilgi */
+footer {
+    background-color: #0288d1;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
+
+/* Mobil uyum */
+@media (max-width: 700px) {
+    .profile, .about, .video-section, .gallery, .places, .contact {
+        width: 95%;
+    }
+
+    .gallery-images img {
+        width: 100%;
+        height: auto;
+    }
+}
